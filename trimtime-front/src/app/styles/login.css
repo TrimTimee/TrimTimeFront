@@ -1,0 +1,10 @@
+.fundo-login{
+    background-image: url('../images/fundo-login.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor preta semi-transparente */
+    background-blend-mode: darken;
+    
+    
+}
