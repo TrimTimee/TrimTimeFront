@@ -1,5 +1,9 @@
+:root{
+    --fonteTitulos: 'Roboto Condensed';
+}
+
 .fundo-login{
-    background-image: url('../images/fundo-login.jpg');
+    background-image: url('../images/login-fundo.avif');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -7,4 +11,8 @@
     background-blend-mode: darken;
     
     
+}
+
+body{
+    font-family:var(--fonteTitulos) ;
 }
