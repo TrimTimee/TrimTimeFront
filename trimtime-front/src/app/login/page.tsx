@@ -13,7 +13,9 @@ const Login = () => {
             typeSpeed: 50,
             backSpeed: 25,
             loop: false,
-            backDelay: 2000
+            backDelay: 2000,
+            showCursor:false
+            
         });
 
         return () => {
@@ -55,7 +57,7 @@ const Login = () => {
                         />
                     </label>
 
-                    <h1 className='text-white text-sm ml-24'><a href="#">Esqueceu sua senha?</a></h1>
+                    <h1 className='text-white text-sm ml-28'><a href="#">Esqueceu sua senha?</a></h1>
 
                     <input 
                         type="submit" 
