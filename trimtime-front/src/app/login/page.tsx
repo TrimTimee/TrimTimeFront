@@ -25,7 +25,7 @@ const Login = () => {
 
     return (
         <div className="fundo-login flex flex-col w-screen h-screen justify-center items-center">
-            <div className='bg-black w-80 h-auto bg-opacity-30 flex flex-col gap-4 justify-left rounded-md border border-gray-400 border-opacity-50 shadow-md'>
+            <div className='bg-black w-80 h-auto bg-opacity-30 flex flex-col gap-4 justify-left rounded-md border border-gray-400 border-opacity-50 shadow-md md:w-120'>
                 
                 <div className='bg-gray-400 w-80 h-20 opacity-85 p-4'>
                     
@@ -65,7 +65,7 @@ const Login = () => {
                         className='w-60 h-8 cursor-pointer font-bold text-white border bg-purple-700 rounded-md hover:bg-purple-500 border-purple-700 transition-all' 
                     />
 
-                    <h1 className='text-white text-sm'>Não possui conta ainda? <a href="" className='hover:text-blue-200'>Crie agora!</a></h1>
+                    <h1 className='text-white text-sm'>Não possui conta ainda? <a href="" className='hover:text-blue-200 underline text-blue-400'>Crie agora!</a></h1>
                 </div>
             </div>
         </div>
