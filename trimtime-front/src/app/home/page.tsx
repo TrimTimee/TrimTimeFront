@@ -1,12 +1,17 @@
+"use client"
+
 import { MenuLateral } from "@/components/MenuLateral";
+
 
 const Page = ()=>{
     return (
-        <div className="bg-slate-700 w-full h-screen">
+        <div className="">
 
        <MenuLateral/>
 
-       ...
+       
+
+       
 
 
 
