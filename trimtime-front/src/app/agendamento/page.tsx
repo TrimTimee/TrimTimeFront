@@ -1,6 +1,6 @@
 "use client";
 
-import { MenuLateral } from '@/components/MenuLateral';
+import { Navbar } from '@/components/Navbar';
 import React, { useState, useEffect } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
@@ -94,7 +94,7 @@ const SistemaAgendamento = () => {
 
   return (
     <div className="flex flex-col ">
-      <MenuLateral />
+      <Navbar />
 
       <h1 className='font-bold text-center my-8 text-xl'>
         Olá "Usuario", para fazer o agendamento, por favor selecione a data e horário:

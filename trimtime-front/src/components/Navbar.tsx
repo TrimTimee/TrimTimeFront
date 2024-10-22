@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 
-export const MenuLateral = () => {
+export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false); // Controla o estado do menu em dispositivos móveis
 
   return (
