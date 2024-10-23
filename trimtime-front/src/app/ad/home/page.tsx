@@ -1,6 +1,8 @@
 "use client";
-import { Navbar } from "@/components/Navbar";
+import { NavBarAdmin } from "@/components/NavBarAdmin";
 import { useState, useEffect } from "react";
+
+import { Cabecalho } from "@/components/Cabecalho";
 
 
 const Page = () => {
@@ -17,7 +19,7 @@ let anoAtual = data.getUTCFullYear();
   const appointments = [
     { time: "10:00", service: "Corte Simples", client: "João Silva" },
     { time: "11:00", service: "Barba Completa", client: "Pedro Souza" },
-    { time: "16:00", service: "Corte + Barba", client: "Lucas Santos" },
+    { time: "21:00", service: "Corte + Barba", client: "Lucas Santos" },
   ];
 
   // Função para calcular o tempo restante até o próximo atendimento
@@ -63,22 +65,11 @@ const calculateTimeUntilNextAppointment = (): string => {
 
   return (
     <div className="min-h-screen bg-gray-700">
-      {/* Cabeçalho com logotipo e nome da barbearia */}
-      <header className="flex items-center justify-between p-4 bg-gray-800 text-white w-full">
-        <div className="flex items-center space-x-4">
-          <img src="#" alt="Logo da Barbearia" className="h-10" />
-          <h1 className="text-2xl">Barbearia X</h1>
-        </div>
-
-        {/* Perfil do usuário */}
-        <div className="flex items-center space-x-4">
-          <img src="#" alt="Avatar" className="w-10 h-10 rounded-full" />
-          <span>Administrador</span>
-        </div>
-      </header>
+      
+      <Cabecalho user='Administrador'/>
 
       {/* Menu lateral */}
-      <Navbar />
+      <NavBarAdmin />
 
       <section className="text-center mt-4">
         <div className="mt-4 text-white">
@@ -92,7 +83,7 @@ const calculateTimeUntilNextAppointment = (): string => {
         {/* Seção de Agendamentos do dia */}
         <section className="mt-6">
           <h2 className="text-lg font-bold text-white">
-            Agendamentos de Hoje ({diaAtual}/{mesAtual}/{anoAtual})
+            Agendamentos de Hoje ({diaAtual}/{mesAtual+1}/{anoAtual})
           </h2>
           <ul className="space-y-4 mt-4">
             {appointments.map((appointment, index) => (

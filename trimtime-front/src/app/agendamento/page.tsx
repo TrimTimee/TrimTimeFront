@@ -1,5 +1,6 @@
 "use client";
 
+import { Cabecalho } from '@/components/Cabecalho';
 import { Navbar } from '@/components/Navbar';
 import React, { useState, useEffect } from 'react';
 import Calendar from 'react-calendar';
@@ -93,15 +94,18 @@ const SistemaAgendamento = () => {
   };
 
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col bg-gray-700">
+
+      <Cabecalho user='Cliente'/>
+
       <Navbar />
 
-      <h1 className='font-bold text-center my-8 text-xl'>
+      <h1 className='font-bold text-center my-8 text-xl text-white'>
         Olá "Usuario", para fazer o agendamento, por favor selecione a data e horário:
       </h1>
 
       <div className='flex flex-col justify-center items-center'>
-        <h1 className="text-2xl mb-4">Agendamento de Serviços</h1>
+        <h1 className="text-2xl mb-4 text-white">Agendamento de Serviços</h1>
 
         <Calendar
           onChange={handleDateChange}
@@ -164,12 +168,12 @@ const SistemaAgendamento = () => {
         {/* Botões para agendar ou cancelar */}
         <div className="mt-4">
           <button
-            className='w-20 h-14 border border-black hover:text-white hover:bg-black transition-all mx-4'
+            className='w-20 h-14 border border-white hover:text-black hover:bg-white transition-all mx-4 text-white'
             onClick={handleAgendar}
           >
             Agendar
           </button>
-          <button className='w-20 h-14 border border-black mx-4 hover:text-white hover:bg-red-600'>
+          <button className='w-20 h-14 border border-white mx-4 hover:text-white hover:bg-red-600 text-white mb-4'>
             Cancelar
           </button>
         </div>
