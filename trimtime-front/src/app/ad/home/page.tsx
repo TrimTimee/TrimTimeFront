@@ -47,9 +47,9 @@ const calculateTimeUntilNextAppointment = (): string => {
   } else {
     const hours = Math.floor(timeDifference / (1000 * 60 * 60));
     const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+   
 
-    return `${hours}h ${minutes}m ${seconds}s`;
+    return `${hours}h ${minutes}m `;
   }
 };
 
@@ -64,7 +64,7 @@ const calculateTimeUntilNextAppointment = (): string => {
   }, [nextAppointmentIndex]); // Adicionar dependência para recalcular ao mudar o próximo atendimento
 
   return (
-    <div className="min-h-screen min-w-screen bg-gray-700 flex flex-col container">
+    <div className="min-h-screen min-w-screen bg-gray-700 flex flex-col container justify-between">
       
       <Cabecalho user='Administrador' />
   
@@ -73,23 +73,23 @@ const calculateTimeUntilNextAppointment = (): string => {
   
       <section className="text-center mt-4 px-4 sm:px-6 md:px-8 lg:px-10">
         <div className="mt-4 text-white">
-          <h3 className="text-xl font-bold sm:text-sm md:text-sm">Tempo até o próximo atendimento:</h3>
-          <p className="text-5xl">{timeRemaining}</p>
+          <h3 className="text-xl font-bold sm:text-sm md:text-2xl">Tempo até o próximo atendimento:</h3>
+          <p className="text-7xl">{timeRemaining}</p>
         </div>
       </section>
   
       {/* Conteúdo principal */}
-      <main className="p-4 lg:w-2/3 w-full mx-auto mt-6">
+      <main className="p-4 lg:w-2/3 w-full mx-auto mt-6 ">
         {/* Seção de Agendamentos do dia */}
         <section className="mt-6 flex flex-col justify-center items-center ">
-          <h2 className="text-lg font-bold text-white text-center md:text-left">
+          <h2 className="text-xl font-bold text-white text-center md:text-left lg:text-3xl">
             Agendamentos de Hoje ({diaAtual}/{mesAtual + 1}/{anoAtual})
           </h2>
-          <ul className="space-y-4 mt-4">
+          <ul className="space-y-4 mt-4 text-xl">
             {appointments.map((appointment, index) => (
               <li 
                 key={index} 
-                className="flex flex-col md:flex-row justify-between items-center bg-gray-200 p-4 rounded-lg sm:w-2/3  "
+                className="flex flex-col md:flex-row justify-between items-center bg-gray-200 p-4 rounded-lg md:w-auto  lg:w-screen lg:h-24  "
               >
                 <span>{appointment.time} - {appointment.service}</span>
                 <span>Cliente: {appointment.client}</span>
@@ -99,13 +99,15 @@ const calculateTimeUntilNextAppointment = (): string => {
         </section>
   
         {/* Botões de ação */}
-        <div className="flex flex-col sm:flex-row justify-around mt-6 space-y-4 sm:space-y-0 sm:space-x-4">
-          <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 w-full sm:w-auto">
-            Ver Relatórios
-          </button>
-          <button className="bg-yellow-500 text-white px-4 py-2 rounded-md hover:bg-yellow-600 w-full sm:w-auto">
-            Gerenciar Serviços
-          </button>
+        <div className="flex flex-col sm:flex-row mt-6 space-y-4 sm:space-y-0 sm:space-x-4 md:flex-col md:w-96 md:m-auto md:mt-4 ">
+          <div className="md:flex md:flex-col md:justify-center md:h-96 lg:flex-row md:gap-4 md:w-fit md:text-xl lg:justify-between lg:py-32  lg:gap-16 lg:text-2xl">
+            <button className="mb-2 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 w-full sm:w-auto md:mb-4 md:w-96 lg:h-24">
+              Ver Relatórios
+            </button>
+            <button className="bg-yellow-500 text-white px-4 py-2 rounded-md hover:bg-yellow-600 w-full sm:w-auto md:w-96  lg:h-24 ">
+              Gerenciar serviços
+            </button>
+          </div>
         </div>
       </main>
     </div>

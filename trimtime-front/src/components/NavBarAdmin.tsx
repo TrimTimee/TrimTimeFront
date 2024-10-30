@@ -28,7 +28,7 @@ export const NavBarAdmin = () => {
               ></path>
             </g>
           </svg>
-          <a href="" className="">
+          <a href="" className="lg:text-2xl">
             Home
           </a>
         </h1>
@@ -53,7 +53,7 @@ export const NavBarAdmin = () => {
               ></path>
             </g>
           </svg>
-          <a href="" className="hover:underline">
+          <a href="" className="hover:underline lg:text-2xl">
             Reservas
           </a>
         </h1>
@@ -77,7 +77,7 @@ export const NavBarAdmin = () => {
               ></path>
             </g>
           </svg>
-          <a href="" className="hover:underline">
+          <a href="" className="hover:underline lg:text-2xl">
             Mais
           </a>
         </h1>
