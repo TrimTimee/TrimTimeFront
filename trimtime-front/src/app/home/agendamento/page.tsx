@@ -94,7 +94,7 @@ const SistemaAgendamento = () => {
   };
 
   return (
-    <div className="flex flex-col bg-gray-700">
+    <div className="flex flex-col bg-gray-700 ">
 
       <Cabecalho user='Cliente'/>
 
