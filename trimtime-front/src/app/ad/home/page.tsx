@@ -64,7 +64,7 @@ const calculateTimeUntilNextAppointment = (): string => {
   }, [nextAppointmentIndex]); // Adicionar dependência para recalcular ao mudar o próximo atendimento
 
   return (
-    <div className="min-h-screen min-w-screen bg-gray-700 flex flex-col container justify-around">
+    <div className="max-h-screen bg-gray-700 flex flex-col justify-around box-border">
       
       <Cabecalho user='Administrador' />
   

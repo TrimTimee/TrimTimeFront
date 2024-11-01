@@ -8,9 +8,9 @@ export const NavBarAdmin = () => {
   const [menuOpen, setMenuOpen] = useState(false); // Controla o estado do menu em dispositivos móveis
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center ">
       {/* Menu lateral para telas grandes */}
-      <section className="bg-gray-300 flex justify-around text-gray-200 p-4 mt-4 rounded-full w-full lg:w-2/3 lg:flex hidden">
+      <section className="bg-gray-300 flex justify-around text-gray-200 p-4 mt-4 rounded-md w-full lg:w-2/3 lg:flex hidden">
         <h1 className="text-black flex gap-2 cursor-pointer hover:underline ">
           <svg
             width="20px"

@@ -62,7 +62,7 @@ const Login = () => {
                     <input 
                         type="submit" 
                         value='Entrar' 
-                        className='w-60 h-8 cursor-pointer font-bold text-white border bg-purple-700 rounded-md hover:bg-purple-500 border-purple-700 transition-all' 
+                        className='w-60 h-8 cursor-pointer font-bold text-white border bg-blue-700 rounded-md hover:bg-blue-600 border-blue-700 transition-all' 
                     />
 
                     <h1 className='text-white text-sm'>Não possui conta ainda? <a href="" className='hover:text-blue-200 underline text-blue-400'>Crie agora!</a></h1>
