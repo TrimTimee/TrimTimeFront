@@ -9,13 +9,16 @@ import { NavBarAdmin } from "@/components/NavBarAdmin";
 const Page = () => {
     const [selectedDate, setSelectedDate] = useState(new Date()); // Inicializa com a data atual
     const [isModalOpen, setIsModalOpen] = useState(false); // Estado para controlar a visibilidade do modal
-    const [reservas, setReservas] = useState([]); // Estado para armazenar as reservas filtradas
+   // const [reservas, setReservas] = useState([]); // Estado para armazenar as reservas filtradas
 
-    const handleDateChange = (newDate) => {
+    const handleDateChange = (newDate:Date) => {
         setSelectedDate(newDate);
         setIsModalOpen(false); // Fecha o modal após selecionar a data
         // Aqui, você pode filtrar as reservas pela data escolhida
     };
+
+
+    const reservas = [{id:1,nome:'joao',data:'22/11/2024',horario:'15:00',status:'agendado'}]
 
     return (
         <div className="min-h-screen bg-gray-700">
@@ -59,14 +62,14 @@ const Page = () => {
                 <div className="bg-white shadow rounded-lg overflow-hidden mt-4">
                     <table className="min-w-full bg-white">
                         <thead>
-                            <tr>
+                            <tr className="text-left ">
                                 <th className="py-2 px-4 bg-gray-200">Nome</th>
                                 <th className="py-2 px-4 bg-gray-200">Data</th>
                                 <th className="py-2 px-4 bg-gray-200">Horário</th>
                                 <th className="py-2 px-4 bg-gray-200">Status</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody className="italic">
                             {reservas.length > 0 ? (
                                 reservas.map((reserva) => (
                                     <tr key={reserva.id}>
